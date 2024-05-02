@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use App\Models\User;
+use App\Notifications\EmployeeCreateNotification;
+use App\Notifications\LeaveRequestStatusNotification;
 use Illuminate\Foundation\Http\FormRequest;
 use App\Traits\SaveProfilePhotoTrait; 
 use Illuminate\Support\Facades\Hash;
@@ -37,6 +39,8 @@ class StaffStoreRequest extends FormRequest
         $staff = $this->saveProfilePhoto($this, $staff);
 
         $staff->save();
+
+        $staff->notify(new EmployeeCreateNotification($staff));
 
         return redirect()->route('staff.index')->with('success', 'Staff Created Successfully');
     }

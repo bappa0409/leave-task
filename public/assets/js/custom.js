@@ -207,7 +207,8 @@ $(document).on("click", ".status-confirm", function () {
 
 $(document).ready(function() {
     $("#dataTable").DataTable({
-        responsive: true
+        responsive: true,
+        pageLength: 20
     });
 });
 

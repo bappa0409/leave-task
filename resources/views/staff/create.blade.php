@@ -61,7 +61,7 @@
                         </div>
                         <div class="image-preview">
                             <div id="image-preview"
-                                style="background-image: url({{ asset('assets/img/avatars/avatar.jpg') }});"
+                                style="background-image: url({{ asset('assets/img/avatar.jpg') }});"
                                 class="img-fluid img-thumbnail">
                             </div>
                         </div>

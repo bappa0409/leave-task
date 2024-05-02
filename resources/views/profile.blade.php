@@ -62,7 +62,7 @@
                                     </div>
                                     <div class="image-preview">
                                         <div id="image-preview"
-                                            style="background-image: url({{ $user->profile_photo_path ? asset('upload/staffs/' . $user->profile_photo_path) : asset('assets/dist/img/image-preview.png') }});"
+                                            style="background-image: url({{ $user->profile_photo_path ? asset('upload/staffs/' . $user->profile_photo_path) : asset('assets/img/avatar.jpg') }});"
                                             class="img-fluid img-thumbnail">
                                         </div>
                                     </div>

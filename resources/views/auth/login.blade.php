@@ -25,16 +25,14 @@
 
                     <div class="card-group d-block d-md-flex row">
                         <div class="card col-md-7 p-4 mb-0">
-                             {{-- <!--begin::Validation Message-->
-                            @include('include.validation-message')
-                            <!--end::Validation Message--> --}}
+                            
                             <form method="POST" action="{{ route('login') }}">
                             @csrf
                             <div class="card-body">
                                 <h2>Login Here</h2>
                                 <p class="text-body-secondary">Sign In to your account</p>
                                 <div class="mb-3">
-                                    <input id="email" class="form-control @error('email') is-invalid @enderror" type="email" name="email" required autofocus autocomplete="username" placeholder="Username">
+                                    <input id="email" class="form-control @error('email') is-invalid @enderror" type="email" name="email" required autofocus autocomplete="username" placeholder="Email" value="{{old('email')}}">
                                     
                                     @error('email')
                                         <span class="invalid-feedback" role="alert">

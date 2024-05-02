@@ -37,6 +37,16 @@ class LeaveRequestController extends Controller
         }
         
         return view('leave-request.index', compact('leaveRequests'));
+
+        $leaveRequests = [];
+
+        if(Auth::user()->type == 1){
+            $leaveRequests = LeaveRequest::with('user')->orderBy('created_at', 'desc')->get();
+        } else {
+            $leaveRequests = LeaveRequest::with('user')->where('user_id', Auth::id())->orderBy('created_at', 'desc')->get();
+        }
+    
+        return view('leave-request.index', compact('leaveRequests'));
     }
 
     /**
