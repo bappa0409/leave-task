@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2024 at 09:30 AM
+-- Generation Time: May 02, 2024 at 06:01 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -124,22 +124,6 @@ CREATE TABLE `leave_requests` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `leave_requests`
---
-
-INSERT INTO `leave_requests` (`id`, `user_id`, `leave_type`, `start_date`, `end_date`, `reason`, `status`, `comment`, `created_at`, `updated_at`) VALUES
-(2, 1, '1', '2024-04-30', '2024-05-02', 'For Eid Celebrate', 'approve', NULL, '2024-04-26 05:51:52', '2024-04-30 05:56:29'),
-(3, 1, '2', '2024-04-30', '2024-05-22', 'Test', 'cancel', 'Unnessesary', '2024-04-26 06:02:33', '2024-04-30 06:07:01'),
-(4, 1, '2', '2024-04-30', '2024-05-01', 'afdsfsd', 'approve', 'Yes approve it', '2024-04-30 06:39:44', '2024-04-30 07:02:52'),
-(5, 1, '2', '2024-04-30', '2024-05-08', 'I need to go to home', 'pending', NULL, '2024-04-30 07:04:19', '2024-04-30 07:04:19'),
-(6, 1, '3', '2024-04-30', '2024-05-03', 'Go to home', 'pending', NULL, '2024-04-30 07:20:10', '2024-04-30 07:20:10'),
-(7, 10, '1', '2024-05-03', '2024-05-10', 'Personal Emergency', 'cancel', NULL, '2024-04-30 07:22:57', '2024-04-30 11:59:24'),
-(8, 11, '3', '2024-04-30', '2024-05-02', 'I need it', 'approve', 'Okay. DOne', '2024-04-30 07:32:25', '2024-04-30 11:53:39'),
-(9, 11, '2', '2024-05-01', '2024-05-01', NULL, 'pending', NULL, '2024-04-30 20:00:20', '2024-04-30 20:00:20'),
-(10, 1, '1', '2024-05-01', '2024-05-01', 'jj', 'pending', NULL, '2024-04-30 22:27:00', '2024-04-30 22:27:00'),
-(11, 15, '1', '2024-05-01', '2024-05-01', 'Very Emergency', 'pending', NULL, '2024-05-01 00:40:28', '2024-05-01 00:40:28');
-
 -- --------------------------------------------------------
 
 --
@@ -215,7 +199,8 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('l9YzfsHZ2zuQB0F69ZrOJ5TaJfMW5VsaeIDJ2B3n', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiY0xOd0Q0b3ZSazhOTHFhUEgzblhVM3lCcURqanZ1NlNrdWZvcXlrTSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDA6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sZWF2ZS1yZXF1ZXN0L2xpc3QiO31zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO30=', 1714546837);
+('MPNdEIIeNQdaOfvKIMRwrgKYNboBEwtBvsRP0odI', 1, '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoidW84YVZhRmxNNmRJVUpkUVVreUdhdlozdWJoQXVlMmo2ZHg0Z3RwNiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NTM6Imh0dHA6Ly9sb2NhbGhvc3QvbGVhdmUtYXBwL3B1YmxpYy9sZWF2ZS1yZXF1ZXN0cy1kYXRhIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTt9', 1714615303),
+('UtAoQq6lLtIOCZbbZ0yiqtoSMYwwIYJQK5jE73jd', 4, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoieWFZSzA5bnhTcXpSejdIamFMOUNxQ0JjM0ZrRlppSHdVMXVIWlF6dSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6NDE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9sZWF2ZS1yZXF1ZXN0cy1kYXRhIjt9czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6NDt9', 1714622422);
 
 -- --------------------------------------------------------
 
@@ -245,16 +230,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `type`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `current_team_id`, `profile_photo_path`, `status`, `created_at`, `updated_at`) VALUES
-(1, 'Admin', 'admin@gmail.com', 1, NULL, '$2y$12$8HrV4IkD1xojzYXg4DO3FOUYm/beYjAvoYsfBbJ8G1O6y7fVkGTVu', NULL, NULL, NULL, NULL, '1714524684615.jpg', 'active', '2024-04-29 19:02:07', '2024-04-30 18:51:24'),
-(6, 'Kiona Bright', 'superadmin@gmail.com', 2, NULL, '$2y$12$XLQrD4GVsW5EvVYKZe8w2eyG6hxZSVllL2ElZrw/z5PPPEyRTRh9O', NULL, NULL, NULL, NULL, NULL, 'active', '2024-04-30 00:08:45', '2024-04-30 01:11:41'),
-(7, 'Harrison Yang2', 'user@gmail.com', 2, NULL, '$2y$12$YUXYWXstNi.vLpVwPhuSNejq6MVlzNsKeNOtu57b/I6LR1GJ95x.i', NULL, NULL, NULL, NULL, NULL, 'block', '2024-04-30 01:12:08', '2024-04-30 01:42:07'),
-(8, 'Harrison Yang2', 'admin@admin.com', 2, NULL, '$2y$12$753aBTSvXUUOFsyRrKWnhuBEIOhrTt31s6NVYoI0P46mE/P3XcUyi', NULL, NULL, NULL, NULL, NULL, 'active', '2024-04-30 01:25:08', '2024-04-30 01:39:37'),
-(9, 'Bappa Sutradhar', 'superadmin21@gmail.com', 2, NULL, '$2y$12$prOY.deczEsprj9Hf//AY.mB42lVxHgr79qGb1BmCwAmlJJ4QlPLi', NULL, NULL, NULL, NULL, NULL, 'pending', '2024-04-30 01:42:26', '2024-04-30 01:42:26'),
-(10, 'Bappa Sutradhar', 'bappasutradhar947@gmail.com', 2, NULL, '$2y$12$I2CiBQamsNOKa3VWyRsGT.XVhIA7MGd8sARJlDqyCHNpaiz49F05m', NULL, NULL, NULL, NULL, NULL, 'active', '2024-04-30 07:20:43', '2024-04-30 07:22:12'),
-(11, 'Bijoy Saha', 'bijoysaha52000@gmail.com', 2, NULL, '$2y$12$PopLnJQJSLeIebAfByfYWOzUg9AWZsV66EBunPzpdDUsCXtrzSehG', NULL, NULL, NULL, NULL, '1714534027354.jpg', 'active', '2024-04-30 07:30:49', '2024-04-30 21:27:07'),
-(13, 'afsd', 'admin@gmail.comdd', 2, NULL, '$2y$12$1j6gnEMcjzk/iNa72jpPgeJj8bopTSF7OVTlTZyz4A28S21RoKhNS', NULL, NULL, NULL, NULL, NULL, 'pending', '2024-04-30 22:00:19', '2024-04-30 22:00:19'),
-(14, 'test', 'test@gmail.com', 2, NULL, '$2y$12$nVEc1f6jXjUIxFl4d5mCFO15jo4D9wRbKiUwUnRqQKz1.wDhwmTMS', NULL, NULL, NULL, NULL, NULL, '2', '2024-05-01 00:29:36', '2024-05-01 00:29:36'),
-(15, 'Ibrahim Hossain', 'ibrahim@gmail.com', 2, NULL, '$2y$12$/rAbFFpLh/FtcLkgFBDYmOMNV14OOylDADAg40kgn/5l4h4Oj7gD6', NULL, NULL, NULL, NULL, NULL, '2', '2024-05-01 00:37:14', '2024-05-01 00:37:14');
+(1, 'Admin', 'admin@gmail.com', 1, NULL, '$2y$10$x6b/K2jwpDqzf8pLJYhBueDy0Vx4qR3lhFyVEJhXUihAmLEUoZgN2', NULL, NULL, NULL, NULL, '1714622323154.jpg', 'active', '2024-05-01 21:53:08', '2024-05-01 21:58:43'),
+(4, 'Bappa Sutradhar', 'bappa@gmail.com', 2, NULL, '$2y$10$OA4wOjLKQ5ngCOO28Ordue7t33ezXmeJUZ/SQ23YM/jnAV09QGgMK', NULL, NULL, NULL, NULL, '1714622193751.jpg', 'active', '2024-05-01 21:56:33', '2024-05-01 21:58:18');
 
 --
 -- Indexes for dumped tables
@@ -353,7 +330,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT for table `leave_requests`
 --
 ALTER TABLE `leave_requests`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -371,7 +348,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

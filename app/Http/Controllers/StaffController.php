@@ -95,7 +95,9 @@ class StaffController extends Controller
      */
     public function approve(string $id)
     {
-        User::findOrFail($id)->update(['status' => 'active']);
+        $user = User::findOrFail($id);
+        $user->status = 'active';
+        $user->save();
         return response()->json(['success' => 'success']);
     }
 

@@ -39,7 +39,6 @@ class EmployeeCreateNotification extends Notification implements ShouldQueue
      */
     public function toMail(object $notifiable): MailMessage
     {
-        $actionText = $this->employeeCreate->status === 'approve' ? 'Approved' : 'Canceled';
         $actionUrl = url('/');
 
         return (new MailMessage)
